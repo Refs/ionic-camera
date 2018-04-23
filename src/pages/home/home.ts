@@ -11,4 +11,13 @@ export class HomePage {
 
   }
 
+  openCamera() {
+
+    console.log('camera is opened! ')
+    console.log('camera is opened! ')
+    console.log('camera is opened! ')
+    console.log('camera is opened! ')
+    console.log('camera is opened! ')
+  }
+
 }
