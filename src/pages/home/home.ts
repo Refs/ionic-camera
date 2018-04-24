@@ -112,7 +112,7 @@ export class HomePage {
 
     // transfer option
     let options: FileUploadOptions = {
-      fileKey: 'name',
+      fileKey: 'productImage',
       fileName: "myImage_" + random + '.jpg',
       chunkedMode: false,
       httpMethod: 'post',
@@ -122,11 +122,11 @@ export class HomePage {
         price: '1999'
       },
       headers: {
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxoeDEwMTAzMzk4MDhAb3V0bG9vay5jb20iLCJ1c2VySWQiOiI1YWRlZDdiMjMyOTBmYzE3MzA1NzY1OTEiLCJpYXQiOjE1MjQ1NTYzOTcsImV4cCI6MTUyNDU1OTk5N30.H_FtRwqNtDzvr-e0ZMubv_EJfKNzpb_6KCLpZc2R7kI'
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxoeDEwMTAzMzk4MDhAb3V0bG9vay5jb20iLCJ1c2VySWQiOiI1YWRlZDdiMjMyOTBmYzE3MzA1NzY1OTEiLCJpYXQiOjE1MjQ1NjA0MDMsImV4cCI6MTUyNDU2NDAwM30.2krI2ZV1sVwtZIIXZz6tkY5xS7_jrtNXIDdzsvgW99s'
       }
     }
 
-    filetransfer.upload(this.myphoto, 'http://127.0.0.1:3000/products', options)
+    filetransfer.upload(this.myphoto, 'http://192.170.1.38:3000/products', options)
                 .then(
                   (result) => {
                     alert('upload success!')
@@ -141,6 +141,8 @@ export class HomePage {
                     loader.dismiss();
                   }
                 )
+
+  console.log('uploading ...')
 
 
 
