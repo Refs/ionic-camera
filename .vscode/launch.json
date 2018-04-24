@@ -8,6 +8,28 @@
     // ../../src/app/main.ts (c:\Users\lhx10\Desktop\ionic-camera\src\app\main.ts)
     "version": "0.2.0",
     "configurations": [
+      {
+        "name": "Serve to the browser (ionic serve)",
+        "type": "cordova",
+        "request": "launch",
+        "platform": "serve",
+        "devServerAddress": "localhost",
+        "sourceMaps": true,
+        "ionicLiveReload": true,
+        "cwd": "${workspaceRoot}",
+        "devServerTimeout":200000
+      },
+      {
+        "name": "Simulate android in browser",
+        "type": "cordova",
+        "request": "launch",
+        "platform": "android",
+        "target": "chrome",
+        "simulatePort": 8000,
+        "livereload": true,
+        "cwd": "${workspaceRoot}",
+        "sourceMaps": true
+      },
         {
           "type": "chrome",
           "request": "attach",
@@ -15,14 +37,10 @@
           "port": 9222,
           "url": "http://localhost:8100",
           "webRoot": "${workspaceFolder}/${workspaceFolderBasename}",
-          "sourceMaps": true
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "启动 Chrome 并打开 localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+          "sourceMaps": true,
+          "skipFiles": [
+            "${workspaceFolder}/**/node_modules/**/*.js",
+          ]
         }
     ]
 }
