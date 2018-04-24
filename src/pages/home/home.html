@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Give me a camera!
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,6 +13,12 @@
   </p>
 
   <button ion-button full color="primary" (click)=" openCamera() " > click me ! </button>
+
+  <button ion-button full color="secondary" (click)="getImage()" > get picture from libaray </button>
+
+  <button ion-button full color="danger" (click)="cropImage()" > crop image which from libaray </button>
+
+  <button ion-button full color="dark " (click)="uploadImage()" > upload image to the server </button>
 
   <p align="center">
     <img src="{{ myphoto }}" alt="" srcset="">

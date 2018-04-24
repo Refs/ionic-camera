@@ -8,6 +8,15 @@
     // ../../src/app/main.ts (c:\Users\lhx10\Desktop\ionic-camera\src\app\main.ts)
     "version": "0.2.0",
     "configurations": [
+    {
+      "name": "Attach to androids on device",
+      "type": "cordova",
+      "request": "attach",
+      "platform": "android",
+      "target": "device",
+      "cwd": "${workspaceRoot}",
+      "sourceMaps": true
+    },
       {
         "name": "Serve to the browser (ionic serve)",
         "type": "cordova",
